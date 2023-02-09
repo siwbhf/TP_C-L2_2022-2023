@@ -28,7 +28,7 @@ void draw_options(int speed) {
 void draw_credits() {
     mvprintw(LINES / 2 - 2, COLS / 2 - strlen("Ce jeu a ete realise par :") / 2, "Ce jeu a ete realise par :");
     mvprintw(LINES / 2 - 1, COLS / 2 - strlen("BAILLARGEAU Axel, Etudient de 2eme annee a l'UPEM") / 2, "BAILLARGEAU Axel, Etudient de 2eme annee a l'UPEM");
-    mvprintw(LINES / 2, COLS / 2 - strlen("Baptiste Baudet, Etudient de 2eme annee a l'UPEM") / 2, "Baptiste Baudet, Etudient de 2eme annee a l'UPEM");
+    mvprintw(LINES / 2, COLS / 2 - strlen("BOUHAFA Siwar, Etudient de 2eme annee a l'UPEM") / 2, "BOUAFA Siwar, Etudient de 2eme annee a l'UPEM");
     mvprintw(LINES / 2 + 1, COLS / 2 - strlen("Appuyez sur n'importe quelle touche pour revenir au menu") / 2, "Appuyez sur n'importe quelle touche pour revenir au menu");
 }
 
