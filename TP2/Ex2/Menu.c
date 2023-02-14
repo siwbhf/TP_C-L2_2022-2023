@@ -107,10 +107,10 @@ int main_menu() {
                     draw_options(speed);
                     while (1) {
                         touche = getch();
-                        if (touche == '+') {
+                        if (touche == '+' || touche == KEY_UP) {
                             speed = speed == 10 ? 10 : speed + 1;
                             refr = 1;
-                        } else if (touche == '-') {
+                        } else if (touche == '-' || touche == KEY_DOWN) {
                             speed = speed == 1 ? 1 : speed - 1;
                             refr = 1;
                         } else {

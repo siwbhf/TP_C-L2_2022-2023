@@ -2,12 +2,20 @@
 
 void draw_carre_1(int x, int y, int width, int color_pair) {
     attron(COLOR_PAIR(color_pair));
-    for (int i = 0; i < width; i++) {
-        move(y + i - width / 2, x - width / 2);
-        for (int i = 0; i < width; i++) {
-            addch(' ');
-        }
-    }
+    mvhline(y - width / 2, x - width / 2, 0, width);
+    mvhline(y + width / 2, x - width / 2, 0, width);
+    mvvline(y - width / 2, x - width / 2, 0, width);
+    mvvline(y - width / 2, x + width / 2, 0, width);
+    mvaddch(y - width / 2, x - width / 2, ACS_ULCORNER);
+    mvaddch(y + width / 2, x - width / 2, ACS_LLCORNER);
+    mvaddch(y - width / 2, x + width / 2, ACS_URCORNER);
+    mvaddch(y + width / 2, x + width / 2, ACS_LRCORNER);
+    // for (int i = 0; i < width; i++) {
+    //     move(y + i - width / 2, x - width / 2);
+    //     for (int i = 0; i < width; i++) {
+    //         addch(' ');
+    //     }
+    // }
     attroff(COLOR_PAIR(color_pair));
 }
 
@@ -17,8 +25,8 @@ int main_carre_clic() {
     int mid_y = LINES / 2;
 
     start_color();
-    init_pair(1, COLOR_RED, COLOR_RED);
-    init_pair(2, COLOR_BLUE, COLOR_BLUE);
+    init_pair(1, COLOR_RED, COLOR_BLACK);
+    init_pair(2, COLOR_BLUE, COLOR_BLACK);
 
     mousemask(ALL_MOUSE_EVENTS, NULL);
     MEVENT ev;
@@ -26,7 +34,7 @@ int main_carre_clic() {
     noecho();
     curs_set(0);
     keypad(stdscr, TRUE);
-    // nodelay(stdscr, TRUE);
+    nodelay(stdscr, TRUE);
 
     int touche = -1;
 
