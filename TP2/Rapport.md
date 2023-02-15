@@ -1,11 +1,15 @@
 # TP2
 
-Baillargeau Axel
+BAILLARGEAU Axel
 BOUHAFA Siwar
 
 ## Introduction
 
 Le but de ce TP est de mettre en pratique les notions vues en cours sur les chaînes de caractères et les fonctions de la bibliothèque standard ainsi que la bibliothèque Ncurses.
+
+## Compilation et exécution
+
+La compilation se fait avec la commande `make` dans les dossiers Ex2, Ex3 et Ex4. Il est possible de nettoyer les fichiers objets et exécutables avec la commande `make clean`.
 
 ## 1. Documentation man
 
@@ -73,9 +77,3 @@ int main() {
     printf("%d\n", atoi("abc123"));  // 0
 }
 ```
-
-## 2. Complements sur Ncurses
-
-## 3. Cryptage de César
-
-### 3.5
